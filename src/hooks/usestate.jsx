@@ -2,10 +2,13 @@ import React, { useState } from "react";
 
 export function NameList() {
   const [List, setList] = useState(["Abdullah", "Jill", "Abdul Rehman"]);
-  const [name, setName] = useState("");
+  //()=> "abdullah" means that the useState initially on start will show this state;
+  const [name, setName] = useState(() => "Abdullah");
   const addName = () => {
     // List.push(name);
+    // setLIsh ([...List,name]) would return the name updateed state to the list
     setList([...List, name]);
+    //setName(''); means that the setname would return empty set at after the first engagement like 
     setName('');
   };
 
