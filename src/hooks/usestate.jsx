@@ -10,7 +10,7 @@ export function NameList() {
     setList([...List, name]);
     //setName(''); means that the setname would return empty set at after the first engagement like 
     setName('');
-  };
+  };  
 
   return (
     <>
