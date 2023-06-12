@@ -35,6 +35,7 @@ export function Name() {
       </div>
     );
   }
+
   
   
   
@@ -106,10 +107,24 @@ function UseReducerHook() {
       <button onClick={() => dispatch("increment")}>Increament</button>
       <button onClick={() => dispatch("decrement")}>Decrement </button>
       <Againreducer />
+      <Usereduce />
     </div>
   );
 }
 
+
+export function Usereduce(){
+  const [count, dispatch] = useReducer((state,action)=>({
+    ...state,...action
+  })
+  ,()=>({first: ''}))
+  return(
+    <div>
+<input type="text" value={count.first} onChange={(e)=>dispatch({first: e.target.value})}/>
+<div>First Name: {count.first}</div>
+    </div>
+  );
+}
 export default UseReducerHook;
 
 //learn
