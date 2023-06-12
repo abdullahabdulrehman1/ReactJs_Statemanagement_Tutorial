@@ -1,6 +1,9 @@
 import React from 'react';
 import UseStateHook, { NameList } from './hooks/usestate';
-import UserReducerHook ,{Againreducer, Name}from './hooks/usereducer';
+import UserReducerHook ,{Againreducer, Name, Usereduce}from './hooks/usereducer';
+import Usememohook from './hooks/usememo';
+import Useeffecthook from './hooks/useeffect';
+import Userefhook from './hooks/useref';
 
 function App() {
   return (
@@ -10,7 +13,11 @@ function App() {
 
       <UserReducerHook />
       <Againreducer />
+      <Usereduce />
       <Name />
+      {/* <Usememohook/> */}
+      <Useeffecthook />
+      <Userefhook />
     </div>
   );
 }
