@@ -29,7 +29,7 @@ export function NameList() {
         Add name
       </button>
     </>
-  );
+  ); 
 }
 
 
@@ -62,7 +62,15 @@ function UseStateHook() {
         {" "}
         3Click {first}
       </button>
+      <Usestatereduce />
     </div>
+  );
+}
+export function Usestatereduce(){
+  const [count] = useState([1,4,6]);
+  const total =  count.reduce((init,count)=>count +init,0);
+  return(
+    <div>{total}</div>
   );
 }
 
